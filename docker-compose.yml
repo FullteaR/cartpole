@@ -1,0 +1,13 @@
+version: '3'
+services:
+  cartpole:
+    build: .
+    image: frt/cartpole
+    container_name: cartpole
+    ports:
+      - 8082:8888
+    volumes:
+      - .:/mnt
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
