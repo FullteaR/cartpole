@@ -28,7 +28,7 @@ ENV PATH $PATH:/usr/local/bin/python/bin
 
 RUN pip install --upgrade pip setuptools
 RUN pip install\
- tqdm
+ tqdm\
  keras-rl2\
  gym\
  h5py\
@@ -36,8 +36,7 @@ RUN pip install\
  gym[atari]\
  gym-notebook-wrapper\
  jupyter\
- tensorflow-gpu==2.4.0\
- tqdm
+ tensorflow-gpu==2.4.0
 
 RUN wget -O /Roms.rar http://www.atarimania.com/roms/Roms.rar
 RUN mkdir /Roms && unrar x /Roms.rar /Roms && python -m atari_py.import_roms /Roms
