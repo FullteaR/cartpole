@@ -36,7 +36,8 @@ RUN pip install\
  gym[atari]\
  gym-notebook-wrapper\
  jupyter\
- tensorflow-gpu==2.4.0
+ tensorflow-gpu==2.4.0\
+ tqdm
 
 RUN wget -O /Roms.rar http://www.atarimania.com/roms/Roms.rar
 RUN mkdir /Roms && unrar x /Roms.rar /Roms && python -m atari_py.import_roms /Roms
